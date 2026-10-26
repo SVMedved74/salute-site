@@ -1,0 +1,114 @@
+/* Salute — правки поверх темы «Бизнес».
+   Акцент: чернильный синий. Контраст: белый на акценте 8.0, акцент на белом 8.0. */
+:root {
+  --accent: #0A4F9E;
+  --accent-soft: #DCE8F7;
+  --accent-on-dark: #8CC4FF;
+  --bg-alt: #F2F5F9;
+  --line: #DCE2EA;
+  --cyan: #00A0D6;
+  --magenta: #D6187A;
+  --yellow: #F5C400;
+}
+
+/* ---------- Логотип: SALUTE + четыре капли CMYK ---------- */
+.logo { display: inline-flex; align-items: center; gap: 10px; letter-spacing: .04em; }
+.logo__dots { display: inline-flex; gap: 3px; }
+.logo__dots i { width: 8px; height: 8px; border-radius: 50%; display: block; }
+.logo__dots i:nth-child(1) { background: var(--cyan); }
+.logo__dots i:nth-child(2) { background: var(--magenta); }
+.logo__dots i:nth-child(3) { background: var(--yellow); }
+.logo__dots i:nth-child(4) { background: var(--text); }
+.footer .logo { color: var(--on-dark); }
+.footer .logo__dots i:nth-child(4) { background: var(--on-dark); }
+
+.header__call { display: none; line-height: 1.25; text-align: right; }
+.header__call small { display: block; font-size: .78rem; color: var(--text-muted); }
+.header__phone { font-weight: 700; color: var(--text); text-decoration: none; white-space: nowrap; }
+@media (min-width: 720px) { .header__call { display: block; } }
+.header__right { display: flex; align-items: center; gap: 20px; }
+
+/* ---------- Первый экран ---------- */
+.hero__img { aspect-ratio: 4 / 3; }
+@media (min-width: 900px) { .hero__img { aspect-ratio: 1 / 1; } }
+.hero__facts b { font-variant-numeric: tabular-nums; }
+
+/* ---------- Подбор по модели принтера ---------- */
+.picker { background: var(--surface); border: 1.5px solid var(--line); border-radius: var(--radius-card); padding: 24px; box-shadow: var(--shadow); }
+.picker__row { display: grid; gap: 12px; }
+.picker input {
+  font: 400 1.05rem/1.4 var(--font-body); color: var(--text);
+  padding: 15px 16px; border-radius: var(--radius); border: 1.5px solid var(--line); background: var(--bg); width: 100%;
+}
+.picker input:focus { border-color: var(--accent); outline: none; }
+.picker__hint { font-size: .88rem; color: var(--text-muted); margin: 10px 0 0; }
+.picker__hint button { font: inherit; color: var(--accent); background: none; border: 0; padding: 0; text-decoration: underline; text-underline-offset: .2em; cursor: pointer; }
+.picker__result { margin-top: 18px; }
+.picker__result:empty { display: none; }
+.picker__result ul { list-style: none; margin: 0; padding: 0; }
+.picker__result li { display: flex; flex-wrap: wrap; gap: 4px 12px; justify-content: space-between; padding: 12px 0; border-top: 1px solid var(--line); }
+.picker__result li span { color: var(--text-muted); font-size: .92rem; }
+@media (min-width: 720px) { .picker { padding: 32px; } .picker__row { grid-template-columns: 1fr auto; } }
+
+/* ---------- Два входа: опт и свой бизнес ---------- */
+.audience { display: grid; gap: 20px; }
+.audience .card { display: flex; flex-direction: column; }
+.audience .card ul { margin: 0 0 24px; padding-left: 1.2em; color: var(--text-muted); }
+.audience .card li { margin-bottom: 6px; }
+.audience .card .btn { margin-top: auto; align-self: flex-start; }
+@media (min-width: 720px) { .audience { grid-template-columns: 1fr 1fr; } }
+
+/* ---------- Каталог ---------- */
+.cat { display: grid; gap: 16px; grid-template-columns: 1fr; }
+.cat .card { padding: 22px; }
+.cat .card h3 { margin-bottom: .3em; }
+.cat .card p { margin: 0; font-size: .95rem; }
+.cat__tag { display: inline-block; font-size: .78rem; font-weight: 700; color: var(--accent); background: var(--accent-soft); border-radius: 99px; padding: 4px 10px; margin-bottom: 12px; }
+@media (min-width: 600px) { .cat { grid-template-columns: repeat(2, 1fr); } }
+@media (min-width: 1024px) { .cat { grid-template-columns: repeat(3, 1fr); } }
+
+/* ---------- Стартовые комплекты для сублимации ---------- */
+.kit { display: flex; flex-direction: column; }
+.kit ul { margin: 0 0 20px; padding-left: 1.2em; color: var(--text-muted); }
+.kit .btn { margin-top: auto; align-self: flex-start; }
+.kit--main { border: 2px solid var(--accent); }
+.kit .cat__tag { align-self: flex-start; }
+
+/* ---------- Цифры ---------- */
+.facts { display: grid; gap: 28px; grid-template-columns: repeat(2, 1fr); }
+.facts b { display: block; font: var(--head-weight) clamp(2rem, 6vw, 3rem)/1 var(--font-head); color: var(--accent-on-dark); margin-bottom: 8px; font-variant-numeric: tabular-nums; }
+@media (min-width: 900px) { .facts { grid-template-columns: repeat(4, 1fr); } }
+
+/* ---------- Где купить ---------- */
+.where { display: grid; gap: 12px; }
+.where__item { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; padding: 18px 0; border-bottom: 1px solid var(--line); }
+.where__item b { min-width: 9em; }
+.where__item span { color: var(--text-muted); flex: 1 1 14em; }
+.market { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
+
+/* ---------- Скачать ---------- */
+.dl { display: flex; gap: 16px; align-items: flex-start; }
+.dl .card__icon { flex: none; margin: 0; font-weight: 700; font-size: .8rem; border-radius: var(--radius); }
+.dl h3 { margin-bottom: .2em; }
+.dl p { margin: 0 0 .6em; font-size: .95rem; }
+
+/* ---------- Форма ---------- */
+.form__ok { display: none; padding: 16px; border-radius: var(--radius); background: color-mix(in srgb, var(--accent-on-dark) 18%, transparent); }
+.form.is-sent .form__ok { display: block; }
+.section--dark .field input, .section--dark .field select { border-color: transparent; }
+
+/* Нижний отступ, чтобы плавающая кнопка не закрывала подвал */
+@media (max-width: 899px) { body { padding-bottom: 76px; } }
+
+/* ---------- Новые поступления ---------- */
+.news { list-style: none; margin: 0; padding: 0; }
+.news li { display: flex; gap: 16px; padding: 16px 0; border-bottom: 1px solid var(--line); }
+.news time { flex: none; width: 6.5em; color: var(--accent); font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* Метка «заполнить» в черновике — убрать, когда придут данные */
+.todo { background: #FFF1B8; color: var(--text); padding: 0 4px; border-radius: 4px; font-weight: 600; }
+
+/* Шапка: не переносить пункты и кнопку */
+.nav { gap: 22px; }
+.nav a, .header .btn { white-space: nowrap; }
+.header__call small { white-space: nowrap; }

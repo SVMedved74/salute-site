@@ -1,0 +1,32 @@
+/* Бизнес — финансы, банковские продукты, кредитный брокер, бухгалтерия, B2B-услуги, страхование.
+   Настроение: точно, надёжно, без суеты. Белый, графит, изумруд (рост, деньги без кислоты).
+   Шрифт: Golos Text (заголовки и текст, разный вес) — строгий, отлично читается в цифрах.
+   Контраст: текст/фон 16.4, вторичный 7.3, акцент на фоне 6.6, белый на кнопке 6.6. */
+@import url('https://fonts.googleapis.com/css2?family=Golos+Text:wght@400;500;600;700&display=swap&subset=cyrillic');
+
+:root {
+  --bg: #FFFFFF;
+  --bg-alt: #F1F4F2;
+  --surface: #FFFFFF;
+  --text: #15212B;
+  --text-muted: #4C5863;
+  --accent: #0F6A4D;        /* изумруд */
+  --accent-ink: #FFFFFF;
+  --accent-soft: #D6EDE4;
+  --line: #DDE3E0;
+  --dark: #15212B;
+  --on-dark: #F1F4F2;
+  --accent-on-dark: #7FD6B2;
+
+  --font-head: 'Golos Text', system-ui, sans-serif;
+  --font-body: 'Golos Text', system-ui, sans-serif;
+  --head-weight: 700;
+  --head-tracking: -.02em;
+  --head-scale: 1;
+  --eyebrow-tracking: .08em;
+
+  --radius: 8px;
+  --radius-card: 12px;
+  --radius-img: 12px;
+  --shadow: 0 1px 2px rgba(21, 33, 43, .06), 0 6px 20px rgba(21, 33, 43, .06);
+}
