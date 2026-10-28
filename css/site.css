@@ -112,3 +112,21 @@
 .nav { gap: 22px; }
 .nav a, .header .btn { white-space: nowrap; }
 .header__call small { white-space: nowrap; }
+
+/* ---------- Главное: фоторамки и фотобумага ---------- */
+.star { display: grid; gap: 24px; }
+.star__item { display: flex; flex-direction: column; background: var(--surface); border-radius: var(--radius-card); box-shadow: var(--shadow); overflow: hidden; border-top: 4px solid var(--accent); }
+.star__img { aspect-ratio: 4 / 3; border-radius: 0; }
+.star__body { flex: 1; padding: 28px; display: flex; flex-direction: column; }
+.star__body .cat__tag { align-self: flex-start; }
+.star__body h3 { font-size: 1.4rem; }
+.star__body ul { margin: 0 0 20px; padding-left: 1.2em; color: var(--text-muted); }
+.star__body li { margin-bottom: 6px; }
+.star__body .btn { margin-top: auto; align-self: flex-start; }
+.chips { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 24px; }
+.chips span { font-size: .88rem; font-weight: 600; padding: 6px 12px; border: 1.5px solid var(--line); border-radius: 99px; font-variant-numeric: tabular-nums; }
+@media (min-width: 900px) { .star { grid-template-columns: 1fr 1fr; } }
+
+/* Рамки и бумага в каталоге — с акцентной обводкой */
+.cat .cat--main { border: 2px solid var(--accent); }
+.cat .cat--main a { display: inline-block; margin-top: 10px; font-weight: 600; }
